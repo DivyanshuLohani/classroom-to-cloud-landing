@@ -1,7 +1,4 @@
 import {
-  BookOpenIcon,
-  MessagesSquareIcon,
-  Settings2Icon,
   TabletSmartphoneIcon,
   ClipboardList,
   Package,

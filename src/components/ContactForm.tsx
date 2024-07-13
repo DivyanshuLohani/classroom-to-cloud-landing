@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -7,7 +6,6 @@ import { z } from "zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -46,16 +44,50 @@ const contactFormSchema = z.object({
 });
 
 export default function ContactForm() {
-  // 1. Define your form.
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
   });
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
+    const googleFormData = new FormData();
+    googleFormData.append("entry.986079633", values.firstName);
+    googleFormData.append("entry.992797385", values.lastName);
+    googleFormData.append("entry.374677059", values.email || ""); // optional field
+    googleFormData.append("entry.1129264584", values.contactNumber);
+    googleFormData.append("entry.550362266", values.coachingName);
+    googleFormData.append("entry.1221096006", values.address || "");
+
+    // Google Form submission URL
+    const googleFormUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSeMUnc2zd6SLCtRJYTH_nmFHkIcJv8R0BaH7EjX1nqVeqsurA/formResponse";
+
+    const asString = [...googleFormData.entries()]
+      .map(
+        (x) =>
+          `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1] as string)}`
+      )
+      .join("&");
+    // Send POST request to Google Form endpoint using Axios
+    await fetch(googleFormUrl + "?" + asString, {
+      mode: "no-cors",
+      redirect: "follow",
+      referrer: "no-referer",
+    });
+
+    // Generate WhatsApp message based on form data
+    const message = `Hi, I am ${values.firstName}. I want to know more about ClassroomToCloud.`;
+
+    // Replace non-digit characters in phone number for WhatsApp URL
+    const phoneNumber = "8252649099";
+    const formattedPhone = phoneNumber.replace(/\D/g, "");
+
+    // WhatsApp URL with generated message
+    const whatsappUrl = `https://wa.me/${formattedPhone}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    // Open WhatsApp URL in new tab
+    window.open(whatsappUrl, "_blank");
   }
 
   return (

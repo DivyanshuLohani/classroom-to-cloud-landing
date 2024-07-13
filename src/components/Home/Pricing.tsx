@@ -81,7 +81,7 @@ export default function PricingSectionCards() {
             <CardHeader className="text-center pb-2">
               <CardTitle className="mb-7">Basic</CardTitle>
               <span className="font-bold text-5xl">
-                ₹3499 <span className="text-2xl">+ ₹699/month</span>
+                ₹3499 <span className="text-2xl">+ ₹999/month</span>
               </span>
             </CardHeader>
             <CardDescription className="text-center">
@@ -128,7 +128,7 @@ export default function PricingSectionCards() {
               </Badge>
               <CardTitle className="!mb-7">Premium</CardTitle>
               <span className="font-bold text-5xl">
-                ₹5499 <span className="text-2xl">+ ₹2100/month</span>
+                ₹5499 <span className="text-2xl">+ ₹2500/month</span>
               </span>
             </CardHeader>
             <CardDescription className="text-center w-11/12 mx-auto">
@@ -198,18 +198,15 @@ export default function PricingSectionCards() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {planFeatures.map((featureType) => (
-              <>
+            {planFeatures.map((featureType, i) => (
+              <React.Fragment key={i}>
                 <TableRow className="bg-muted/50" key={featureType.type}>
                   <TableCell colSpan={5} className="font-bold">
                     {featureType.type}
                   </TableCell>
                 </TableRow>
-                {featureType.features.map((feature) => (
-                  <TableRow
-                    key={feature.name}
-                    className="text-muted-foreground"
-                  >
+                {featureType.features.map((feature, i) => (
+                  <TableRow key={i} className="text-muted-foreground">
                     <TableCell>{feature.name}</TableCell>
                     <TableCell>
                       <div className="mx-auto w-min">
@@ -231,7 +228,7 @@ export default function PricingSectionCards() {
                     </TableCell>
                   </TableRow>
                 ))}
-              </>
+              </React.Fragment>
             ))}
           </TableBody>
         </Table>
@@ -244,10 +241,7 @@ export default function PricingSectionCards() {
             <Table>
               {planFeatures.map((featureType, i) => (
                 <TableBody key={i}>
-                  <TableRow
-                    key={featureType.type}
-                    className="bg-muted hover:bg-muted"
-                  >
+                  <TableRow className="bg-muted hover:bg-muted">
                     <TableCell
                       colSpan={2}
                       className="w-10/12 text-primary font-bold"
@@ -255,11 +249,8 @@ export default function PricingSectionCards() {
                       {featureType.type}
                     </TableCell>
                   </TableRow>
-                  {featureType.features.map((feature) => (
-                    <TableRow
-                      className="text-muted-foreground"
-                      key={feature.name}
-                    >
+                  {featureType.features.map((feature, i) => (
+                    <TableRow className="text-muted-foreground" key={i}>
                       <TableCell className="w-11/12">{feature.name}</TableCell>
                       <TableCell className="text-right">
                         {feature.basic ? (
@@ -281,10 +272,7 @@ export default function PricingSectionCards() {
             <Table>
               {planFeatures.map((featureType, i) => (
                 <TableBody key={i}>
-                  <TableRow
-                    key={featureType.type}
-                    className="bg-muted hover:bg-muted"
-                  >
+                  <TableRow className="bg-muted hover:bg-muted">
                     <TableCell
                       colSpan={2}
                       className="w-10/12 text-primary font-bold"
@@ -292,11 +280,8 @@ export default function PricingSectionCards() {
                       {featureType.type}
                     </TableCell>
                   </TableRow>
-                  {featureType.features.map((feature) => (
-                    <TableRow
-                      className="text-muted-foreground"
-                      key={feature.name}
-                    >
+                  {featureType.features.map((feature, i) => (
+                    <TableRow className="text-muted-foreground" key={i}>
                       <TableCell className="w-11/12">{feature.name}</TableCell>
                       <TableCell className="text-right">
                         {feature.premium ? (

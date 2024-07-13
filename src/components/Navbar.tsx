@@ -1,8 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/nhEAaij58Kt
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import Link from "next/link";
 import {
   Popover,
@@ -15,12 +10,20 @@ import {
   CollapsibleTrigger,
   CollapsibleContent,
 } from "@/components/ui/collapsible";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <header className="flex h-16 w-full items-center justify-between bg-white px-4 shadow-sm dark:bg-gray-950 md:px-6">
-      <Link href="#" className="flex items-center gap-2" prefetch={false}>
-        Classroom To Cloud
+    <header className="flex  w-full items-center justify-between px-10 border-b shadow-sm bg-card md:px-6 sticky top-0 z-10 ">
+      <Link href="#" className="flex items-center gap-2 " prefetch={false}>
+        <Image
+          className=""
+          src={"/logo.svg"}
+          width={80}
+          height={100}
+          alt="Logo"
+        />
+        <span className="text-xl font-bold">Class To Cloud</span>
       </Link>
       <nav className="hidden lg:flex">
         <ul className="flex items-center gap-4">
@@ -35,7 +38,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="#"
+              href="#pricing"
               className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
               prefetch={false}
             >
@@ -44,7 +47,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="#"
+              href="#contact"
               className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
               prefetch={false}
             >

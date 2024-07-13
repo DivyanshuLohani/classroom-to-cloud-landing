@@ -32,7 +32,7 @@ export default function HeroSectionCentredWithImage() {
               </Button>
             </div>
           </div>
-          <div className="mt-10 relative max-w-5xl mx-auto">
+          {/* {<div className="mt-10 relative max-w-5xl mx-auto">
             {
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -41,7 +41,7 @@ export default function HeroSectionCentredWithImage() {
                 alt="Image Description"
               />
             }
-          </div>
+          </div>} */}
         </div>
       </div>
       {/* End Hero */}

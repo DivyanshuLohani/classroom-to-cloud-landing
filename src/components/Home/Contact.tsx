@@ -1,15 +1,3 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
 import ContactForm from "../ContactForm";
 
 export default function Contact() {
@@ -20,15 +8,12 @@ export default function Contact() {
           {/* Grid */}
           <div className="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
             <div>
-              <p
-                className="inline-block font-medium !bg-clip-text text-transparent text-lg"
-                style={{ background: "var(--gradient)" }}
-              >
-                A revolution
-              </p>
               {/* Title */}
               <div className="mt-4 md:mb-12 max-w-2xl">
-                <h1 className="mb-4 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                <h1
+                  className="mb-4 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-transparent !bg-clip-text"
+                  style={{ background: "var(--gradient)" }}
+                >
                   Get Stated Today
                 </h1>
                 <p className="text-xl text-muted-foreground">
