@@ -28,7 +28,7 @@ export default function HeroSectionCentredWithImage() {
                 }}
                 size="lg"
               >
-                Get your classroom to clould
+                Get your class to clould
               </Button>
             </div>
           </div>
