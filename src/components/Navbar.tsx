@@ -65,48 +65,13 @@ export default function Navbar() {
           </PopoverTrigger>
           <PopoverContent className="w-64 space-y-1">
             <Link
-              href="#"
+              href="#features"
               className="block rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
               prefetch={false}
             >
-              Home
+              Features
             </Link>
-            <Collapsible className="space-y-1">
-              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50">
-                Features
-                <ChevronRightIcon className="h-5 w-5 transition-transform [&[data-state=open]]:rotate-90" />
-              </CollapsibleTrigger>
-              <CollapsibleContent className="space-y-1 pl-4">
-                <Link
-                  href="#"
-                  className="block rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-                  prefetch={false}
-                >
-                  Analytics
-                </Link>
-                <Link
-                  href="#"
-                  className="block rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-                  prefetch={false}
-                >
-                  Developer Tools
-                </Link>
-                <Link
-                  href="#"
-                  className="block rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-                  prefetch={false}
-                >
-                  Security & Compliance
-                </Link>
-                <Link
-                  href="#"
-                  className="block rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
-                  prefetch={false}
-                >
-                  Scalability
-                </Link>
-              </CollapsibleContent>
-            </Collapsible>
+        
             <Link
               href="#"
               className="block rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
@@ -115,14 +80,14 @@ export default function Navbar() {
               Pricing
             </Link>
             <Link
-              href="#"
+              href="#pricing"
               className="block rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
               prefetch={false}
             >
               About
             </Link>
             <Link
-              href="#"
+              href="#contact"
               className="block rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50"
               prefetch={false}
             >
