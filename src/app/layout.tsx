@@ -3,8 +3,14 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Class To Cloud",
+  description: "Your gateway to seamless online education and coaching.",
+};
 
 export default function RootLayout({
   children,
